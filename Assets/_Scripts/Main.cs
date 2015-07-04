@@ -4,15 +4,15 @@ using System.Collections.Generic;
 
 public class Main : MonoBehaviour {
 
-    public List<GameObject> btList = new List<GameObject>();
+    public string actualMaterial;
+    public string actualPoligon;
 
-	void Start () 
-    {
-        //Time.timeScale = 0f;
-	}
+
+	void Start ()
+    { this.actualMaterial = ""; this.actualPoligon = ""; }
 
 	void FixedUpdate ()
     {
-        //Time.timeScale = 0f;
+        Debug.Log(this.actualPoligon);
 	}
 }

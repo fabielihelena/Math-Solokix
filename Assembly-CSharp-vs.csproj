@@ -53,6 +53,7 @@
      <Compile Include="Assets\_Scripts\Main.cs" />
      <Compile Include="Assets\_Scripts\MassCalc.cs" />
      <Compile Include="Assets\_Scripts\Round.cs" />
+     <Compile Include="Assets\_Scripts\ScrollBarManager.cs" />
      <Compile Include="Assets\_Scripts\TogglePanelButton.cs" />
      <None Include="Assets\_StandardAssets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Change.cs" />
+     <Compile Include="Assets\_Scripts\CubeController.cs" />
      <Compile Include="Assets\_Scripts\CubeRotation.cs" />
      <Compile Include="Assets\_Scripts\DragPanel.cs" />
      <Compile Include="Assets\_Scripts\Main.cs" />

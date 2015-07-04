@@ -4,7 +4,7 @@ using System.Collections;
 public class Round : MonoBehaviour 
 {
 	public float m = 2;
-
+    public GameObject orbitalTarget;
 	private Quaternion targetRotation;
 
 	void Start()
@@ -13,6 +13,7 @@ public class Round : MonoBehaviour
 	void FixedUpdate () 
 	{
 		Vector3 q = targetRotation.eulerAngles;
+        transform.position =  Vector3.MoveTowards(transform.position, orbitalTarget.transform.position, 1f);
 		if (Input.GetMouseButton(1) && Input.GetAxis("Mouse X") > 0) 
 		{
 			//transform.Rotate(new Vector3(0,m,0));

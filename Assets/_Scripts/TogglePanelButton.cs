@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class TogglePanelButton : MonoBehaviour {
@@ -10,9 +11,15 @@ public class TogglePanelButton : MonoBehaviour {
     void Start()
     { this.main = GameObject.Find("GameController").GetComponent<Main>(); }
 
+    public void ChangeQuantity()
+    { 
+        main.actualQuantity = Mathf.RoundToInt(GetComponent<Scrollbar>().value*10);
+        GetComponentInChildren<Text>().text = "Quantos? "+Mathf.RoundToInt(GetComponent<Scrollbar>().value * 10).ToString();
+    }
+
     //função que modificara a string "actualCube", para que ela seja igual ao material clicado
     public void ChangeMaterial()
-    { main.actualMaterial = this.name; }
+    { main.actualMaterial = this.gameObject.name; Debug.Log(gameObject.name); }
 
     public void ChangePoligon()
     { main.actualPoligon = this.name; }

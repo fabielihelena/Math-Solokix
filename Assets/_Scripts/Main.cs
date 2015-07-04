@@ -6,7 +6,8 @@ public class Main : MonoBehaviour {
 
     public string actualMaterial;
     public string actualPoligon;
-
+    public int actualQuantity;
+    public GameObject actualPuzzle;
 
 	void Start ()
     { this.actualMaterial = ""; this.actualPoligon = ""; }

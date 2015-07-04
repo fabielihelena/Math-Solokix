@@ -11,6 +11,16 @@ public class TogglePanelButton : MonoBehaviour {
     void Start()
     { this.main = GameObject.Find("GameController").GetComponent<Main>(); }
 
+    public void ChangeHigh(string dimension)
+    {
+        main.actualHigh = float.Parse(dimension);
+    }
+
+    public void ChangeSize(string dimension)
+    {
+        main.actualSize = float.Parse(dimension);
+    }
+
     public void ChangeQuantity()
     { 
         main.actualQuantity = Mathf.RoundToInt(GetComponent<Scrollbar>().value*10);

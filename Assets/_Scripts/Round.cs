@@ -25,12 +25,12 @@ public class Round : MonoBehaviour
 			q += new Vector3(0,-m,0);
 		}
 
-		if (Input.GetAxis ("Mouse ScrollWheel") > 0 && Camera.main.fieldOfView > 20) 
+		if (Input.GetAxis ("Mouse ScrollWheel") > 0 ) 
 		{
 			//Camera.main.fieldOfView += -m;
             Camera.main.transform.Translate(0, 0, 10 * Time.deltaTime);
 		}
-        if (Input.GetAxis("Mouse ScrollWheel") < 0 && Camera.main.transform.position.z <= -12f) 
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 ) 
 		{
 			//Camera.main.fieldOfView += m;
             Camera.main.transform.Translate(0, 0, -10 * Time.deltaTime);

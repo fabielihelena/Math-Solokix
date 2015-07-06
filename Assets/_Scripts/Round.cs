@@ -7,13 +7,18 @@ public class Round : MonoBehaviour
     public GameObject orbitalTarget;
 	private Quaternion targetRotation;
 
+    void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, orbitalTarget.transform.position, 1f);
+    }
+
 	void Start()
 	{ targetRotation = transform.rotation; }
 
 	void FixedUpdate () 
 	{
 		Vector3 q = targetRotation.eulerAngles;
-        transform.position =  Vector3.MoveTowards(transform.position, orbitalTarget.transform.position, 1f);
+        
 		if (Input.GetMouseButton(1) && Input.GetAxis("Mouse X") > 0) 
 		{
 			//transform.Rotate(new Vector3(0,m,0));

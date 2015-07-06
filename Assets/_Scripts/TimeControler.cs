@@ -13,12 +13,18 @@ public class TimeControler : MonoBehaviour {
 
 	void Start ()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         this.button = GameObject.Find("ButtonTry");
 	}
 
     public void BeginTime()
     {
+        Rigidbody[] r = GameObject.FindGameObjectWithTag("Main").GetComponent<Main>().actualPuzzle.GetComponentsInChildren<Rigidbody>();
+        foreach(Rigidbody childR in r)
+        {
+            childR.useGravity = true;
+            childR.isKinematic = false;
+        }
        StartCoroutine(PlayTimer());
        if (this.name.Equals("Time"))
        { this.button.SetActive(false); }
